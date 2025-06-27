@@ -145,3 +145,37 @@ h1 {
     color: #4299e1;
     font-weight: bold;
 }
+.sample-data {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.sample-data h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.sample-data table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.sample-data th,
+.sample-data td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.sample-data th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.sample-data td {
+    font-size: 14px;
+}
