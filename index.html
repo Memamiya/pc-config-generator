@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC構成表ジェネレーター</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>PC構成表ジェネレーター</h1>
+        <div class="description">
+            <p>HPのカスタムメイドPCのCSVファイルをアップロードして、PC構成表を生成します。</p>
+            <p>ブラウザ上で完全に動作し、データは外部に送信されません。</p>
+        </div>
+        
+        <div class="upload-area" id="uploadArea">
+            <div class="upload-box">
+                <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                </svg>
+                <p>CSVファイルをドラッグ＆ドロップ<br>または</p>
+                <input type="file" id="fileInput" accept=".csv" hidden>
+                <button type="button" class="select-btn" onclick="document.getElementById('fileInput').click()">
+                    ファイルを選択
+                </button>
+            </div>
+        </div>
+        
+        <div id="status" class="status"></div>
+        
+        <div class="features">
+            <h2>出力される項目</h2>
+            <ul>
+                <li>モデル名</li>
+                <li>プロセッサー（CPU）</li>
+                <li>OS</li>
+                <li>ディスプレイ</li>
+                <li>Officeソフト有無</li>
+                <li>Webカメラ</li>
+                <li>メモリ</li>
+                <li>ストレージ</li>
+                <li>グラフィックス</li>
+                <li>光学ドライブ</li>
+                <li>無線LAN/Bluetooth</li>
+                <li>マウス有無</li>
+                <li>キーボード有無</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
