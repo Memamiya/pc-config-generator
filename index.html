@@ -11,8 +11,8 @@
     <div class="container">
         <h1>PC構成表ジェネレーター</h1>
         <div class="description">
-            <p>HPのカスタムメイドPCのCSVファイルをアップロードして、PC構成表を生成します。</p>
-            <p>ブラウザ上で完全に動作し、データは外部に送信されません。</p>
+            <p>HPのカスタムメイドPCの情報をExcelまたはCSVファイルからPC構成表を生成します。</p>
+            <p>対応形式：Excel (.xlsx, .xls) または CSV (.csv)</p>
         </div>
         
         <div class="upload-area" id="uploadArea">
@@ -20,8 +20,8 @@
                 <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                 </svg>
-                <p>CSVファイルをドラッグ＆ドロップ<br>または</p>
-                <input type="file" id="fileInput" accept=".csv" hidden>
+                <p>Excel/CSVファイルをドラッグ＆ドロップ<br>または</p>
+                <input type="file" id="fileInput" accept=".xlsx,.xls,.csv" hidden>
                 <button type="button" class="select-btn" onclick="document.getElementById('fileInput').click()">
                     ファイルを選択
                 </button>
@@ -29,6 +29,27 @@
         </div>
         
         <div id="status" class="status"></div>
+        
+        <div class="sample-data">
+            <h2>サンプルデータ形式</h2>
+            <p>以下のような形式でデータを準備してください：</p>
+            <table>
+                <tr>
+                    <th>モデル名</th>
+                    <th>プロセッサー</th>
+                    <th>OS</th>
+                    <th>メモリ</th>
+                    <th>ストレージ</th>
+                </tr>
+                <tr>
+                    <td>HP EliteBook X G1</td>
+                    <td>Intel Core i5</td>
+                    <td>Windows 11 Pro</td>
+                    <td>32GB</td>
+                    <td>512GB SSD</td>
+                </tr>
+            </table>
+        </div>
         
         <div class="features">
             <h2>出力される項目</h2>
